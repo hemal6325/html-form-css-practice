@@ -1,0 +1,125 @@
+/* Universal selector - only apply basic reset, remove background color here */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; /* Good practice for consistent box model */
+}
+
+body {
+    background-color: darkslategrey; /* Apply the main background to the body */
+    font-family: Arial, sans-serif; /* A more readable default font */
+    color: #333; /* Default text color for the body */
+}
+
+/* Header Styling (Logo and Navbar in one line) */
+header {
+    display: flex; /* Use flexbox for the header */
+    justify-content: space-between; /* Pushes logo to left, nav to right */
+    align-items: center; /* Vertically centers content */
+    padding: 15px 30px; /* Add some padding around the header */
+    background-color: #333; /* Dark background for the header */
+    color: aliceblue; /* Default text color for header content */
+}
+
+.logo img {
+    height: 50px; /* Set a fixed height for the logo image */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Styling */
+/* Changed class name to nav-menu as per HTML, and it's a <nav> element now */
+.nav-menu { 
+    /* Remove previous text-align and negative margin */
+    /* font-family, font-size etc. can be applied directly to <ul> or <li> for better control */
+    font-size: 16px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: aliceblue; /* Text color for nav items */
+}
+
+.nav-menu ul {
+    display: flex; /* Make list items horizontal */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default ul padding */
+    margin: 0; /* Remove default ul margin */
+}
+
+.nav-menu ul li {
+    margin-left: 30px; /* Space between navigation items */
+}
+
+.nav-menu ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent (.nav-menu) */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-menu ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff; /* Explicitly white background for the form */
+    padding: 40px; /* Adjusted padding for better visual balance */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Stronger shadow for depth */
+    width: 350px; /* Adjusted width for the form */
+    margin: 50px auto; /* Center the form horizontally with top margin */
+    display: flex; /* Use flexbox for internal form elements */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between form elements */
+}
+
+form h1 {
+    color: #333; /* Dark text for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+}
+
+form label {
+    color: #555; /* Slightly lighter dark for labels */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space below labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    background-color: #f8f8f8; /* Light background for inputs */
+    color: #333; /* Dark text for input content */
+    border: 1px solid #ddd; /* Light border */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Make them fill their container */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px; /* Minimum height for textarea */
+}
+
+form button[type="submit"] {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text for the button */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
